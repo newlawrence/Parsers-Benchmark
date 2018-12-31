@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -14,6 +14,7 @@
     <ProjectGuid>{48C67E95-2BEA-48EB-8C6A-C30C4ACACADA}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>mathparserbenchmarkproject</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -21,7 +22,7 @@
     <UseDebugLibraries>true</UseDebugLibraries>
     <CharacterSet>NotSet</CharacterSet>
     <UseOfMfc>Static</UseOfMfc>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -29,7 +30,7 @@
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>NotSet</CharacterSet>
     <UseOfMfc>Static</UseOfMfc>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -122,6 +123,15 @@
     <ClInclude Include="..\AsmJit\WarningsPop.h" />
     <ClInclude Include="..\AsmJit\WarningsPush.h" />
     <ClInclude Include="..\atmsp\atmsp.h" />
+    <ClInclude Include="..\calculate\calculate.hpp" />
+    <ClInclude Include="..\calculate\calculate\container.hpp" />
+    <ClInclude Include="..\calculate\calculate\exception.hpp" />
+    <ClInclude Include="..\calculate\calculate\lexer.hpp" />
+    <ClInclude Include="..\calculate\calculate\node.hpp" />
+    <ClInclude Include="..\calculate\calculate\parser.hpp" />
+    <ClInclude Include="..\calculate\calculate\symbol.hpp" />
+    <ClInclude Include="..\calculate\calculate\util.hpp" />
+    <ClInclude Include="..\calculate\calculate\wrapper.hpp" />
     <ClInclude Include="..\chaiscript\chaiscript.hpp" />
     <ClInclude Include="..\chaiscript\chaiscript_defines.hpp" />
     <ClInclude Include="..\chaiscript\chaiscript_stdlib.hpp" />
@@ -159,6 +169,7 @@
     <ClInclude Include="..\exprtk\exprtk.hpp" />
     <ClInclude Include="..\exprtk\exprtk_mpfr_adaptor.hpp" />
     <ClInclude Include="..\include\BenchATMSP.h" />
+    <ClInclude Include="..\include\BenchCalculate.h" />
     <ClInclude Include="..\include\BenchChaiScript.h" />
     <ClInclude Include="..\include\BenchExprTk.h" />
     <ClInclude Include="..\include\BenchExprTkFloat.h" />
@@ -287,6 +298,7 @@
     <ClInclude Include="..\muparserx\suStringTokens.h" />
     <ClInclude Include="..\muparserx\utGeneric.h" />
     <ClInclude Include="..\tinyexpr\tinyexpr.h" />
+    <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\AsmJit\AssemblerX86X64.cpp" />
@@ -376,6 +388,7 @@
     <ClCompile Include="..\muparserx\mpValueCache.cpp" />
     <ClCompile Include="..\muparserx\mpVariable.cpp" />
     <ClCompile Include="..\src\BenchATMSP.cpp" />
+    <ClCompile Include="..\src\BenchCalculate.cpp" />
     <ClCompile Include="..\src\BenchChaiScript.cpp" />
     <ClCompile Include="..\src\BenchExprTk.cpp" />
     <ClCompile Include="..\src\BenchExprTkFloat.cpp" />
@@ -399,6 +412,9 @@
   <ItemGroup>
     <None Include="..\chaiscript\language\chaiscript_prelude.chai" />
     <None Include="..\fparser\fparser.hh" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="math-parser-benchmark-project.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

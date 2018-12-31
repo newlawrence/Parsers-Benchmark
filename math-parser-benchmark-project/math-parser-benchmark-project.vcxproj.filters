@@ -283,6 +283,7 @@
     <ClCompile Include="..\muParserSSE\muParserSSE.cpp">
       <Filter>muparsersse</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\BenchCalculate.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\chaiscript\chaiscript_threading.hpp">
@@ -843,6 +844,37 @@
     <ClInclude Include="..\libcpuid\libcpuid_internal.h">
       <Filter>libcpuid</Filter>
     </ClInclude>
+    <ClInclude Include="..\include\BenchCalculate.h">
+      <Filter>headers</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="..\calculate\calculate.hpp">
+      <Filter>calculate</Filter>
+    </ClInclude>
+    <ClInclude Include="..\calculate\calculate\exception.hpp">
+      <Filter>calculate</Filter>
+    </ClInclude>
+    <ClInclude Include="..\calculate\calculate\lexer.hpp">
+      <Filter>calculate</Filter>
+    </ClInclude>
+    <ClInclude Include="..\calculate\calculate\node.hpp">
+      <Filter>calculate</Filter>
+    </ClInclude>
+    <ClInclude Include="..\calculate\calculate\parser.hpp">
+      <Filter>calculate</Filter>
+    </ClInclude>
+    <ClInclude Include="..\calculate\calculate\symbol.hpp">
+      <Filter>calculate</Filter>
+    </ClInclude>
+    <ClInclude Include="..\calculate\calculate\util.hpp">
+      <Filter>calculate</Filter>
+    </ClInclude>
+    <ClInclude Include="..\calculate\calculate\wrapper.hpp">
+      <Filter>calculate</Filter>
+    </ClInclude>
+    <ClInclude Include="..\calculate\calculate\container.hpp">
+      <Filter>calculate</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\fparser\fparser.hh">
@@ -898,5 +930,11 @@
     <Filter Include="tinyexpr">
       <UniqueIdentifier>{b1b43109-aa45-419d-bf8d-437e1b5cbab8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="calculate">
+      <UniqueIdentifier>{d229516c-4da6-4d1f-a77e-4a181f402331}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="math-parser-benchmark-project.rc" />
   </ItemGroup>
 </Project>

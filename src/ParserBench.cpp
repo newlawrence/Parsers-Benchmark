@@ -32,6 +32,7 @@
 #include "BenchFParser.h"
 #include "BenchMathExpr.h"
 #include "BenchTinyExpr.h"
+#include "BenchCalculate.h"
 #include "BenchNative.h"
 
 #ifdef ENABLE_MPFR
@@ -477,21 +478,22 @@ int main(int argc, const char *argv[])
 
    vBenchmarks.push_back(new BenchExprTk()        );  // <-- Note: first parser becomes the reference!
    vBenchmarks.push_back(new BenchMuParser2(false));
-   vBenchmarks.push_back(new BenchMuParser2(true) );
+   // vBenchmarks.push_back(new BenchMuParser2(true) );
    vBenchmarks.push_back(new BenchMuParserX()     );
    vBenchmarks.push_back(new BenchATMSP()         );
    vBenchmarks.push_back(new BenchLepton()        );
    vBenchmarks.push_back(new BenchFParser()       );
    vBenchmarks.push_back(new BenchMathExpr()      );
    vBenchmarks.push_back(new BenchTinyExpr()      );
+   vBenchmarks.push_back(new BenchCalculate()      );
    #if defined(_MSC_VER) && defined(NDEBUG)
    vBenchmarks.push_back(new BenchMTParser()      ); // <-- Crash in debug mode
    #endif
 
    #ifdef _MSC_VER
-   vBenchmarks.push_back(new BenchMuParserSSE());
+   // vBenchmarks.push_back(new BenchMuParserSSE());
    #endif
-   vBenchmarks.push_back(new BenchExprTkFloat());
+   // vBenchmarks.push_back(new BenchExprTkFloat());
 
    #ifdef ENABLE_MPFR
    vBenchmarks.push_back(new BenchExprTkMPFR ());
