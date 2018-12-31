@@ -1,0 +1,10 @@
+# Visual Studio
+.vs/
+Debug/
+Release/
+math-parser-benchmark-project/Debug/
+math-parser-benchmark-project/Release/
+math-parser-benchmark-project/math-parser-benchmark-project.vcxproj.user
+
+# Benchmark results
+Shootout_*
